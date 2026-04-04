@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Syne", sans-serif;
+  
+  --color-brand-gold: #d4af37;
+  --color-dark-bg: #050505;
+  --color-dark-card: #0a0a0a;
+}
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-white font-sans antialiased selection:bg-brand-gold selection:text-black;
+  }
+}
+
+@utility glass {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10;
+}
+
+@utility text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-white/80 to-white/50;
+}
+
+@utility bento-card {
+  @apply glass rounded-3xl p-8 transition-all duration-500 hover:border-white/20 hover:bg-white/[0.07];
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
