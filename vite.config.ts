@@ -22,3 +22,10 @@ export default defineConfig(({mode}) => {
     },
   };
 });
+import { defineConfig } from 'vite'
+import react from '@vitejs/react-refresh' // ou @vitejs/plugin-react
+
+export default defineConfig({
+  base: '/Revit-Master/', // ESSA LINHA É O SEGREDO
+  plugins: [react()],
+})
