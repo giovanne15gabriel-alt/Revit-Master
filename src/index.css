@@ -6,13 +6,14 @@
   --font-display: "Syne", sans-serif;
   
   --color-brand-gold: #d4af37;
+  --color-brand-navy: #000080;
   --color-dark-bg: #050505;
   --color-dark-card: #0a0a0a;
 }
 
 @layer base {
   body {
-    @apply bg-dark-bg text-white font-sans antialiased selection:bg-brand-gold selection:text-black;
+    @apply bg-dark-bg text-white font-sans antialiased selection:bg-brand-navy selection:text-white;
   }
 }
 
@@ -21,7 +22,7 @@
 }
 
 @utility text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-white/80 to-white/50;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-white/90 to-brand-navy/50;
 }
 
 @utility bento-card {
